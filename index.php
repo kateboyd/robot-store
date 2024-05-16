@@ -1,34 +1,21 @@
 <?php
 
+require_once 'src/Factories/PdoFactory.php';
 require_once 'src/Entities/ProductSummary.php';
 require_once 'src/Entities/Categories.php';
 require_once 'src/Entities/Characters.php';
 require_once 'src/Entities/ProductDetails.php';
+require_once 'src/Models/CategoriesModel.php';
+require_once 'src/Models/ProductDetailsModel.php';
+require_once 'src/Models/ProductSummaryModel.php';
+require_once 'src/Models/CharacterDetailsModel.php';
 
+$db = PdoFactory::connect();
 
-$db = new PDO('mysql:host=DB;dbname=robot_store', 'root', 'password');
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
-$query = $db->prepare('SELECT `image`, `title`, `price` FROM `products`;');
-$query->execute();
-$query->setFetchMode(PDO::FETCH_CLASS, ProductSummary::class);
-$product_summary = $query->fetchAll();
-
-$query = $db->prepare('SELECT `category`, `category_id` FROM `products` GROUP BY `category`;');
-$query->execute();
-$query->setFetchMode(PDO::FETCH_CLASS, Categories::class);
-$category_details = $query->fetchAll();
-
-$query = $db->prepare('SELECT `character`, `character_id` FROM `products` GROUP BY `character`;');
-$query->execute();
-$query->setFetchMode(PDO::FETCH_CLASS, Characters::class);
-$character_details = $query->fetchAll();
-
-$query = $db->prepare('SELECT `image`, `title`, `price`, `description`, `category` FROM `products`;');
-$query->execute();
-$query->setFetchMode(PDO::FETCH_CLASS, ProductDetails::class);
-$product_details = $query->fetchAll();
-
+$category_details = CategoriesModel::getCategory_details($db);
+$product_details = ProductDetailsModel::getProduct_details($db);
+$product_summary = ProductSummaryModel::getProduct_summary($db);
+$character_details = CharacterDetailsModel::getCharacter_details($db);
 
 ?>
 
