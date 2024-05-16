@@ -1,0 +1,31 @@
+.productpage {
+width: 100%;
+
+}
+
+img {
+    height: 150px;
+
+}
+
+.checkboxes {
+    width: 200px;
+    position: absolute;
+    left: 50px;
+}
+
+.productcontainer {
+    height: 350px;
+    width: 150px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 5px;
+    text-align: left;
+}
+
+.productbox {
+    display: flex;
+    margin-left: 220px;
+    flex-wrap: wrap;
+
+}
