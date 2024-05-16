@@ -8,9 +8,9 @@ class ProductSummary
     public function productSummarySection()
     {
            echo '<div class="productcontainer">';
-            echo "<img src=" . $this->image . ">";
+            echo '<img class="summaryimages" src=' . $this->image . '>';
             echo "<h3>" . $this->title . "</h3>";
-            echo "<p>£" . $this->price . "</p>";
+            echo "<p>$" . number_format($this->price, 2) . "</p>";
             echo "</div>";
     }
 

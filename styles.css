@@ -1,9 +1,11 @@
 .productpage {
 width: 100%;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
-img {
+.summaryimages {
     height: 150px;
 
 }
@@ -27,5 +29,24 @@ img {
     display: flex;
     margin-left: 220px;
     flex-wrap: wrap;
+    max-width: 850px;
+
+}
+
+.detailsbox {
+
+}
+
+.productdetailscontainer {
+    display: flex;
+    width: 800px;
+margin:auto;
+
+
+
+}
+
+.detailimages {
+    height: 250px;
 
 }

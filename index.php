@@ -3,6 +3,7 @@
 require_once 'src/Entities/ProductSummary.php';
 require_once 'src/Entities/Categories.php';
 require_once 'src/Entities/Characters.php';
+require_once 'src/Entities/ProductDetails.php';
 
 
 $db = new PDO('mysql:host=DB;dbname=robot_store', 'root', 'password');
@@ -22,6 +23,12 @@ $query = $db->prepare('SELECT `character`, `character_id` FROM `products` GROUP 
 $query->execute();
 $query->setFetchMode(PDO::FETCH_CLASS, Characters::class);
 $character_details = $query->fetchAll();
+
+$query = $db->prepare('SELECT `image`, `title`, `price`, `description`, `category` FROM `products`;');
+$query->execute();
+$query->setFetchMode(PDO::FETCH_CLASS, ProductDetails::class);
+$product_details = $query->fetchAll();
+
 
 ?>
 
@@ -57,6 +64,13 @@ $character_details = $query->fetchAll();
         ?>
     </div>
 
+        <div class="detailsbox">
+        <?php
+        foreach ($product_details as $details) {
+            echo $details->ProductDetailsSection();
+        }
+        ?>
+        </div>
     </div>
 </body>
 </html>
