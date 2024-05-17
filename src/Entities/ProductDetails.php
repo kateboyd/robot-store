@@ -21,6 +21,9 @@ class ProductDetails
         <h1>$' . number_format($this->price, 2) . '</h1>
         <p>' . $this->description . '</p>
         <h3>' . $this->title . '</h3>
+        <a href="robot_store_homepage.php">
+            <button>Back to Homepage</button>
+        </a>
         </div>
         </div>';
     }

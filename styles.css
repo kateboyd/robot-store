@@ -1,12 +1,13 @@
 .productpage {
 width: 100%;
     margin-top: 20px;
+    margin-left: 30px;
     font-family: Arial, Helvetica, sans-serif;
 
 }
 
 .summaryimages {
-    height: 150px;
+    height: 200px;
 
 }
 
@@ -17,12 +18,11 @@ width: 100%;
 }
 
 .productcontainer {
-    height: 350px;
-    width: 150px;
-    margin: auto;
+    width: 200px;
     margin-bottom: 10px;
     padding: 5px;
     text-align: left;
+
 }
 
 .productbox {
@@ -36,13 +36,11 @@ width: 100%;
 .productdetailscontainer {
     display: flex;
     width: 800px;
-margin:auto;
-
-
-
+    margin:auto;
+    margin-top: 10px;
 }
 
 .detailimages {
-    height: 250px;
-
+    height: 320px;
+    margin-right: 20px;
 }
