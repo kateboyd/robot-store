@@ -6,7 +6,10 @@ class ProductDetails
     private float $price;
 
     private string $description;
+    private string $id;
+
     private string $category;
+
 
 
     public function productDetailsSection()

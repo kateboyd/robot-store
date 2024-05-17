@@ -13,7 +13,6 @@ require_once 'src/Models/CharacterDetailsModel.php';
 $db = PdoFactory::connect();
 
 $category_details = CategoriesModel::getCategory_details($db);
-$product_details = ProductDetailsModel::getProduct_details($db);
 $product_summary = ProductSummaryModel::getProduct_summary($db);
 $character_details = CharacterDetailsModel::getCharacter_details($db);
 
@@ -51,13 +50,13 @@ $character_details = CharacterDetailsModel::getCharacter_details($db);
         ?>
     </div>
 
-        <div class="detailsbox">
-        <?php
-        foreach ($product_details as $details) {
-            echo $details->ProductDetailsSection();
-        }
-        ?>
-        </div>
+<!--        <div class="detailsbox">-->
+<!--        --><?php
+//        foreach ($product_details as $details) {
+//            echo $details->ProductDetailsSection();
+//        }
+//        ?>
+<!--        </div>-->
     </div>
 </body>
 </html>
