@@ -11,7 +11,6 @@ class ProductDetails
     private string $category;
 
 
-
     public function productDetailsSection()
     {
         return '<div class="productdetailscontainer">

@@ -22,10 +22,10 @@ $product_details = ProductModel::getProduct_details($db);
 </head>
 <body>
 
-    <div>
-        <?php
-        echo $product_details->productDetailsSection();
-        ?>
-    </div>
+<div>
+    <?php
+    echo $product_details->productDetailsSection();
+    ?>
+</div>
 </body>
 </html>

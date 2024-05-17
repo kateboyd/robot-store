@@ -7,10 +7,9 @@ class ProductSummary
 
     private int $id;
 
-
     public function productSummarySection()
     {
-           return '<div class="productcontainer">
+        return '<div class="productcontainer">
             <img class="summaryimages" src=' . $this->image . '>
             <a href="product_page.php?id=' . $this->id . '">' . $this->title . '</a>
             <p>$' . number_format($this->price, 2) . '</p>
