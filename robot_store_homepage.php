@@ -6,14 +6,13 @@ require_once 'src/Entities/Categories.php';
 require_once 'src/Entities/Characters.php';
 require_once 'src/Entities/ProductDetails.php';
 require_once 'src/Models/CategoriesModel.php';
-require_once 'src/Models/ProductDetailsModel.php';
-require_once 'src/Models/ProductSummaryModel.php';
+require_once 'src/Models/ProductModel.php';
 require_once 'src/Models/CharacterDetailsModel.php';
 
 $db = PdoFactory::connect();
 
 $category_details = CategoriesModel::getCategory_details($db);
-$product_summary = ProductSummaryModel::getProduct_summary($db);
+$product_summary = ProductModel::getProduct_summary($db);
 $character_details = CharacterDetailsModel::getCharacter_details($db);
 
 ?>

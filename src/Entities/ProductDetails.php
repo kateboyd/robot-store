@@ -14,18 +14,15 @@ class ProductDetails
 
     public function productDetailsSection()
     {
-        echo '<div class="productdetailscontainer">';
-        echo '<img class="detailimages" src=' . $this->image . '>';
-        echo "<div>";
-        echo "<h3>" . $this->title . "</h3>";
-        echo "<h1>$" . number_format($this->price, 2) . "</h1>";
-        echo "<p>" . $this->description . "</p>";
-        echo "<h3>" . $this->title . "</h3>";
-        echo "</div>";
-
-
-
-        echo "</div>";
+        return '<div class="productdetailscontainer">
+        <img class="detailimages" src=' . $this->image . '>
+        <div>
+        <h3>' . $this->title . '</h3>
+        <h1>$' . number_format($this->price, 2) . '</h1>
+        <p>' . $this->description . '</p>
+        <h3>' . $this->title . '</h3>
+        </div>
+        </div>';
     }
 
 }

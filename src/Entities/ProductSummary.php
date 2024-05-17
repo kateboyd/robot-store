@@ -10,11 +10,11 @@ class ProductSummary
 
     public function productSummarySection()
     {
-           echo '<div class="productcontainer">';
-            echo '<img class="summaryimages" src=' . $this->image . '>';
-            echo '<a href="product_page.php?id=' . $this->id . '">' . $this->title . '</a>';
-            echo "<p>$" . number_format($this->price, 2) . "</p>";
-            echo "</div>";
+           return '<div class="productcontainer">
+            <img class="summaryimages" src=' . $this->image . '>
+            <a href="product_page.php?id=' . $this->id . '">' . $this->title . '</a>
+            <p>$' . number_format($this->price, 2) . '</p>
+            </div>';
     }
 
 }
